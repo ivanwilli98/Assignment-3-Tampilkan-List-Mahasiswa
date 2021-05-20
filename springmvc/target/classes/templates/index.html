@@ -1,0 +1,58 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selamat datang spring boot</title>
+</head>
+<body>
+	<h2>Belajar web menggunakan spring boot</h2>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Selamat datang spring boot</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<h2>Belajar web Engine Thymelaf Menggunakan Spring Boot</h2>
+	<h2>List Mahasiswa</h2>
+	
+	<table class="table table-striped">
+		<tr>
+			<th>Nim</th>
+			<th>Nama</th>
+			<th>IPK</th>
+			<th>Jurusan</th>
+			<th>Action</th>
+		</tr>
+		<tr th:each="mhs : ${mahasiswas}">
+			<td th:text="${mhs.nim}"></td>
+			<td th:text="${mhs.nama}"></td>
+			<td th:text="${mhs.ipk}"></td>
+			<td th:text="${mhs.jurusan}"></td>
+			<td>
+				<a href="#">Edit</a> |
+				<a href="#">Hapus</a> |
+				<a href="#">Detail</a>
+			</td>
+		</tr>
+	</table>
+	<div class="row">
+	    <div class="col-sm-6">
+	    	<div sd:pagination-summary="">info</div>
+	    </div>
+	    <div class="col-sm-6">
+	    	<nav class="pull-right">
+			<ul class="pagination" sd:pagination-split="7" sd:pagination="full">
+				<!-- Pagination created by SpringDataDialect, this content is just for mockup -->
+				<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+			   	<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			</ul>
+		</nav>
+	    </div>
+	</div>
+</body>
+</html>
